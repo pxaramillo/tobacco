@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="reset.css">
 </head>
 <body>
-<header role="banner"> </header>
+<header role="banner"> <div id="searchbar"><gcse:search></gcse:search></div> </header>
 <nav role="navigation"> <ul role="list"> <li role="listitem"> </li> </ul> </nav>
 <aside id="leftsidebar"></aside>
 <article role="main">
@@ -20,6 +20,16 @@
 </footer>
 <footer>
 </footer>
+<!-- Put the following javascript before the closing  tag. -->
+<script>
+(function() {
+  var cx = '123:456'; // Insert your own Custom Search engine ID here
+  var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+  gcse.src = (document.location.protocol == 'https' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <!-- Google Analytics -->
 <script>
